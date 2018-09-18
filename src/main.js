@@ -1,5 +1,5 @@
-import 'bootstrap';
-import environment from './environment';
+import 'bootstrap'; // sets location of module/dist to 'bootstrap/'
+import environment from 'environment';
 
 //Configure Bluebird Promises.
 //Note: You may want to use environment-specific configuration.
@@ -11,6 +11,8 @@ Promise.config({
 
 export function configure(aurelia) {
   aurelia.use
+    // .standardConfiguration() is equivalent to
+    // .defaultBindingLanguage().defaultResources().eventAggregator().history().router()
     .standardConfiguration()
     .feature('resources');
 

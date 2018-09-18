@@ -30,8 +30,8 @@
     "source": "src/**/*.css"
   },
   "editor": {
-    "id": "vscode",
-    "displayName": "Visual Studio Code"
+    "id": "atom",
+    "displayName": "Atom"
   },
   "unitTestRunner": {
     "id": "karma",

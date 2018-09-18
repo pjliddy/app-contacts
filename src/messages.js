@@ -1,11 +1,11 @@
 export class ContactUpdated {
-  constructor(contact){
+  constructor(contact) {
     this.contact = contact;
   }
 }
 
 export class ContactViewed {
-  constructor(contact){
+  constructor(contact) {
     this.contact = contact;
   }
 }

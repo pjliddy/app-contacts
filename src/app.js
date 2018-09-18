@@ -1,19 +1,28 @@
-import {WebAPI} from './web-api';
+// Why is WebAPI imported into App?
+
+import { WebAPI } from 'web-api';
 
 export class App {
+  // Ditto?
   static inject = [WebAPI];
-  
+
   constructor(api) {
+    // Ditto?
     this.api = api;
   }
 
-  configureRouter(config, router){
-    config.title = 'Contacts';
-    config.map([
-      { route: '',              moduleId: 'no-selection',   title: 'Select'},
-      { route: 'contacts/:id',  moduleId: 'contact-detail', name:'contacts' }
-    ]);
-
+  // Basic Route configuration
+  configureRouter(config, router) {
     this.router = router;
+
+    // global config object passed in, then modified
+    // to use router, view must have <router-view>; component's view-model requires a configureRouter() function
+    config.title = 'Contacts';
+
+    // check config.map parameter options (default vs. custom)
+    config.map([
+      { route: ['', 'home'], moduleId: 'home', name: 'home', title: 'Select'},
+      { route: 'contacts/:id',  moduleId: 'contact-detail', name: 'contacts' }
+    ]);
   }
 }
