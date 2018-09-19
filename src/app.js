@@ -1,4 +1,4 @@
-// Why is WebAPI imported into App?
+// Why is WebAPI imported into App
 
 import { WebAPI } from 'web-api';
 
